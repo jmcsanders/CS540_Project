@@ -1,4 +1,5 @@
-# Importing libraries
+#Exemple of plotting a data chart with python
+#Importing libraries
 from matplotlib import pyplot as plt
 import numpy as np
  
