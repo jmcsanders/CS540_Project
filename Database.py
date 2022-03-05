@@ -22,7 +22,7 @@ try:
         #
         # Selects the average from the delay time from entires that are more than 1, indicating a delay
         #
-        cursor.execute("SELECT avg(DEP_DELAY_NEW) FROM dataset WHERE MKT_UNIQUE_CARRIER = 'WN' AND DEP_DELAY_NEW > 0")
+        cursor.execute("SELECT avg(delay.DEP_DELAY) FROM (delay INNER JOIN flight ON delay.DELAY_ID = flight.FLIGHT_ID) WHERE  flight.MKT_UNIQUE_CARRIER = 'WN' AND delay.DEP_DELAY > 0")
         query = (cursor.fetchone()[0])
         print(query)
 
@@ -34,9 +34,9 @@ try:
         # Selects the count of entires that are delayed and on time to calculate the chance of a delay for a certain airline
         # Multiplies result by 100 to represent a percentage
         #
-        cursor.execute("SELECT count(DEP_DELAY_NEW) FROM dataset WHERE MKT_UNIQUE_CARRIER = 'WN' AND DEP_DELAY_NEW = 0")
+        cursor.execute("SELECT count(delay.DEP_DELAY) FROM (delay INNER JOIN flight ON delay.DELAY_ID = flight.FLIGHT_ID) WHERE  flight.MKT_UNIQUE_CARRIER = 'WN' AND delay.DEP_DELAY = 0")
         on_time = (cursor.fetchone()[0])
-        cursor.execute("SELECT count(DEP_DELAY_NEW) FROM dataset WHERE MKT_UNIQUE_CARRIER = 'WN' AND DEP_DELAY_NEW > 0")
+        cursor.execute("SELECT count(delay.DEP_DELAY) FROM (delay INNER JOIN flight ON delay.DELAY_ID = flight.FLIGHT_ID) WHERE  flight.MKT_UNIQUE_CARRIER = 'WN' AND delay.DEP_DELAY > 0")
         delayed = (cursor.fetchone()[0])
 
         result = (delayed / (on_time + delayed)) * 100
@@ -50,9 +50,9 @@ try:
         # Selects the count of entires that are cancelled and not cancelled to calculate the chance of a cancellation for a certain airline
         # Multiplies result by 100 to represent a percentage
         #
-        cursor.execute("SELECT count(CANCELLED) FROM dataset WHERE MKT_UNIQUE_CARRIER = 'WN' AND CANCELLED = 0")
+        cursor.execute("SELECT count(delay.CANCELLED) FROM (delay INNER JOIN flight ON delay.DELAY_ID = flight.FLIGHT_ID) WHERE  flight.MKT_UNIQUE_CARRIER = 'WN' AND delay.CANCELLED = 0")
         on_time = (cursor.fetchone()[0])
-        cursor.execute("SELECT count(CANCELLED) FROM dataset WHERE MKT_UNIQUE_CARRIER = 'WN' AND CANCELLED = 1")
+        cursor.execute("SELECT count(delay.CANCELLED) FROM (delay INNER JOIN flight ON delay.DELAY_ID = flight.FLIGHT_ID) WHERE  flight.MKT_UNIQUE_CARRIER = 'WN' AND delay.CANCELLED = 1")
         delayed = (cursor.fetchone()[0])
 
         result = (delayed / (on_time + delayed)) * 100
@@ -61,25 +61,25 @@ try:
 
         #
         # Average Delay Time by Departure Airport
-        # Hard coded in this case to 'DEN' for Denver for testing
+        # Hard coded in this case to 'STL' for testing
         #
         # Selects the average from the delay time from entires that are more than 1, indicating a delay
         #
-        cursor.execute("SELECT avg(DEP_DELAY_NEW) FROM dataset WHERE ORIGIN = 'DAL' AND DEP_DELAY_NEW > 0")
+        cursor.execute("SELECT avg(delay.DEP_DELAY) FROM (delay INNER JOIN segment ON delay.DELAY_ID = segment.SEGMENT_ID) WHERE  segment.ORIGIN = 'STL' AND delay.DEP_DELAY > 0;")
         query = (cursor.fetchone()[0])
         print(query)
 
 
         #
         # Chance of Delay by Departure Airport
-        # Hard coded in this case to 'DEN' for Denver for testing
+        # Hard coded in this case to 'STL' for testing
         #
         # Selects the count of entires that are delayed and on time to calculate the chance of a delay for a certain departure airport
         # Multiplies result by 100 to represent a percentage
         #
-        cursor.execute("SELECT count(DEP_DELAY_NEW) FROM dataset WHERE ORIGIN = 'DAL' AND DEP_DELAY_NEW = 0")
+        cursor.execute("SELECT count(delay.DEP_DELAY) FROM (delay INNER JOIN segment ON delay.DELAY_ID = segment.SEGMENT_ID) WHERE  segment.ORIGIN = 'STL' AND delay.DEP_DELAY = 0;")
         on_time = (cursor.fetchone()[0])
-        cursor.execute("SELECT count(DEP_DELAY_NEW) FROM dataset WHERE ORIGIN = 'DAL' AND DEP_DELAY_NEW > 0")
+        cursor.execute("SELECT count(delay.DEP_DELAY) FROM (delay INNER JOIN segment ON delay.DELAY_ID = segment.SEGMENT_ID) WHERE  segment.ORIGIN = 'STL' AND delay.DEP_DELAY > 0;")
         delayed = (cursor.fetchone()[0])
 
         result = (delayed / (on_time + delayed)) * 100
@@ -88,19 +88,26 @@ try:
 
         #
         # Chance of cancelation by Deparure Airport
-        # Hard coded in this case to 'DEN' for Denver for testing
+        # Hard coded in this case to 'STL' for testing
         # 
         # Selects the count of entires that are cancelled and not cancelled to calculate the chance of a cancellation for a certain departure airport
         # Multiplies result by 100 to represent a percentage
         #
-        cursor.execute("SELECT count(CANCELLED) FROM dataset WHERE ORIGIN = 'DEN' AND CANCELLED = 0")
+        cursor.execute("SELECT count(delay.CANCELLED) FROM (delay INNER JOIN segment ON delay.DELAY_ID = segment.SEGMENT_ID) WHERE  segment.ORIGIN = 'STL' AND delay.CANCELLED = '0'")
         on_time = (cursor.fetchone()[0])
-        cursor.execute("SELECT count(CANCELLED) FROM dataset WHERE ORIGIN = 'DEN' AND CANCELLED = 1")
+        cursor.execute("SELECT count(delay.CANCELLED) FROM (delay INNER JOIN segment ON delay.DELAY_ID = segment.SEGMENT_ID) WHERE  segment.ORIGIN = 'STL' AND delay.CANCELLED = '1'")
         delayed = (cursor.fetchone()[0])
 
         result = (delayed / (on_time + delayed)) * 100
         print(result)   
 
+
+
+
+        #
+        #
+        #
+        
 
 
 except Error as e:
