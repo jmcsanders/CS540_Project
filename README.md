@@ -9,7 +9,9 @@ To run the webapp.py file
 4. Follow the link at the bottom of the command window (http://127.0.0.1:5001/)
 5. 
 
-Running Database.py will connect to the flightdata MySQL database and run queries that will be ran later when the user selects certain options in the GUI. Included queries include -         
+Database.py
+Running Database.py will connect to the flightdata MySQL database and run queries that will be ran later when the user selects certain options in the GUI. Included queries include -
+
         #
         # Average Delay Time by Airline
         # Hard coded in this case to 'WN' for Southwest Airlines for testing
