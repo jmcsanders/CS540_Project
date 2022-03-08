@@ -2,6 +2,7 @@
 CS 540 Semester Project - Flight Delay Prediction
 
 **Webapp.py**
+
 To run the webapp.py file
 1. pip install FLASK
 2. pip install flask_sqlalchemy
@@ -10,10 +11,12 @@ To run the webapp.py file
 5. 
 
 **Database.py**
+
 To run database.py
 1. Start MySQL database server
 2. Run the python code
 3. Output will be numerical values based on calculations of the queried data
+
 Running Database.py will connect to the flightdata MySQL database and run queries that will be ran later when the user selects certain options in the GUI. Included queries include -
         #
         # Average Delay Time by Airline
