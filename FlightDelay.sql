@@ -1,5 +1,5 @@
-CREATE DATABASE flightdata
-USE flightdata
+CREATE DATABASE flightdata;
+USE flightdata;
 
 CREATE TABLE FLIGHT
 
