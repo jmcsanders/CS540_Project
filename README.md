@@ -18,6 +18,7 @@ To run database.py
 3. Output will be numerical values based on calculations of the queried data
 
 Running Database.py will connect to the flightdata MySQL database and run queries that will be ran later when the user selects certain options in the GUI. Included queries include -
+
         #
         # Average Delay Time by Airline
         # Selects the average from the delay time from entires that are more than 1, indicating a delay
