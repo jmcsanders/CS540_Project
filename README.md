@@ -8,7 +8,59 @@ To run the webapp.py file
 2. pip install flask_sqlalchemy
 3. Run code
 4. Follow the link at the bottom of the command window (http://127.0.0.1:5001/)
-5. 
+
+
+**FlightDelay.sql**
+
+To run FlightDelay.sql
+1. Open MySQL server
+2. Connect to your server
+3. Run code
+4. Open new SQL file
+5. Write select * from flight;
+6. Run line
+7. In the result grid, click import records from an external file
+8. Select browse
+9. Choose "Flight.csv" from your file directory
+10. Click next
+11. Click existing table (make sure flightdata.flight is selected on drop down menu)
+12. Click next
+13. Use drop down menus to make every column match
+14. Click next
+15. Click next
+16. Change query line to select * from cause
+17. Run line
+18. In the result grid, click import records from an external file
+19. Select browse
+20. Choose "Cause.csv" from your file directory
+21. Click next
+22. Click existing table (make sure flightdata.cause is selected on drop down menu)
+23. Click next
+24. Use drop down menus to make every column match
+25. Click next
+26. Click next
+27. Change query line to select * from delay
+28. Run line
+29. In the result grid, click import records from an external file
+30. Select browse
+31. Choose "Delays.csv" from your file directory
+32. Click next
+33. Click existing table (make sure flightdata.delay is selected on drop down menu)
+34. Click next
+35. Use drop down menus to make every column match
+36. Click next
+37. Click next
+38. Change query line to select * from segment
+39. Run line
+40. In the result grid, click import records from an external file
+41. Select browse
+42. Choose "Segment.csv" from your file directory
+43. Click next
+44. Click existing table (make sure flightdata.segment is selected on drop down menu)
+45. Click next
+46. Use drop down menus to make every column match
+47. Click next
+48. Click next
 
 **Database.py**
 
