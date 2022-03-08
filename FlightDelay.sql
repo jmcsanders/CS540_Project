@@ -1,4 +1,5 @@
 # CREATE DATABASE flightdata
+# USE flightdata
 
 CREATE TABLE FLIGHT
 
