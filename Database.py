@@ -5,7 +5,7 @@ from mysql.connector import Error
 
 #
 # Connect to MySQL Workbench local
-#
+# Change password for your own
 try:
     conn = msql.connect(host='localhost', user='root',  
                         password='P4he7qv*', database='FlightData')
