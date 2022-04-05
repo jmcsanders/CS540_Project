@@ -108,8 +108,11 @@ To run CS_540_Graphing_Practice.ipynb
 *** Note: This file was only used to practice making the graphs / plots for the website using the data set. It still needs to be connected to the database and website. Instead of using Pandas to read the csv files, the data will be brought into the code using MySQL Queries.
 
 
-**Index.html**
+**CS540-FlightDelay**
+This file contains the updated website interface:
 
-To run the interface of the website:
-
+1.To run the current version of the interface for the project website:
+2.Open the file and all its dependencies with your text editor , locate index.html 
+3.You can run this index.html code within any text editor/to preview it
+4.It can also be accessed directly on our working server : https://flightdelays.poudel.tech/index.html
 
