@@ -111,8 +111,8 @@ To run CS_540_Graphing_Practice.ipynb
 **CS540-FlightDelay**
 This file contains the updated website interface:
 
-1.To run the current version of the interface for the project website:
-2.Open the file and all its dependencies with your text editor , locate index.html 
-3.You can run this index.html code within any text editor/to preview it
-4.It can also be accessed directly on our working server : https://flightdelays.poudel.tech/index.html
+1. To run the current version of the interface for the project website:
+2. Open the file and all its dependencies with your text editor , locate index.html 
+3. You can run this index.html code within any text editor/to preview it
+4. It can also be accessed directly on our working server : https://flightdelays.poudel.tech/index.html
 
