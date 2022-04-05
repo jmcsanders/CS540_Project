@@ -95,3 +95,14 @@ Running Database.py will connect to the flightdata MySQL database and run querie
         # Multiplies result by 100 to represent a percentage
         #
  
+**CS_540_Graphing_Practice.ipynb**
+
+To run CS_540_Graphing_Practice.ipynb
+
+1. Make sure CS_540_Graphing_Practice.ipynb, Flight.csv, Delay.csv, Cause.csv, and Segment.csv are all uploded into Jupyter Notebook
+2. Open CS_540_Graphing_Practice.ipynb in Jupyter Notebook
+3. Run each cell in Jupyter Notebook by hitting "SHIFT" + "ENTER" on each cell
+4. On the Input, type in uppercase letters the Airport Code (e.g., type 'ATL' for Atlanta)
+5. Refer to graphs of average delays
+
+*** Note: This file was only used to practice making the graphs / plots for the website using the data set. It still needs to be connected to the database and website. Instead of using Pandas to read the csv files, the data will be brought into the code using MySQL Queries.
