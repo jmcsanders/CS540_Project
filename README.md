@@ -106,3 +106,10 @@ To run CS_540_Graphing_Practice.ipynb
 5. Refer to graphs of average delays
 
 *** Note: This file was only used to practice making the graphs / plots for the website using the data set. It still needs to be connected to the database and website. Instead of using Pandas to read the csv files, the data will be brought into the code using MySQL Queries.
+
+
+**Index.html**
+
+To run the interface of the website:
+
+
