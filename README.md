@@ -117,11 +117,12 @@ This file contains the updated website interface:
 
 **Final Flask Website application**
 1. Make sure python environment is set up and a python version 3.6 or later is installed.
-2. pip install FLASK
-3. pip install flask_sqlalchemy
-4. Run the code with the following steps in your text editor's terminal
-5. export FLASK_APP=app.py
-6. export FLASK_ENV=development
-7. flask run --host=0.0.0.0 --port=5004 or whatever available port you prefer in your computer.
+2. Open CS540_Project_Flightdelays_Webapp in your text editor.
+3. pip install FLASK
+4. pip install flask_sqlalchemy
+5. Run the code with the following steps in your text editor's terminal
+6. export FLASK_APP=app.py
+7. export FLASK_ENV=development
+8. flask run --host=0.0.0.0 --port=5004 or whatever available port you prefer in your computer.
 
 
