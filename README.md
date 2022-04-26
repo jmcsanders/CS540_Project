@@ -115,3 +115,10 @@ This file contains the updated website interface:
 2. Open the file and all its dependencies with your text editor , locate index.html 
 3. You can run this index.html code within any text editor/to preview it
 
+**Final Flask Website application**
+1. Make sure python environment is set up and a python version 3.6 or later is set up
+1. pip install FLASK
+2. pip install flask_sqlalchemy
+3. Run code
+4. Follow the link at the bottom of the command window (http://127.0.0.1:5001/)
+
