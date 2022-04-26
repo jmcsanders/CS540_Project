@@ -118,11 +118,19 @@ This file contains the updated website interface:
 **Final Flask Website application**
 1. Make sure python environment is set up and a python version 3.6 or later is installed.
 2. Open CS540_Project_Flightdelays_Webapp in your text editor.
-3. pip install FLASK
-4. pip install flask_sqlalchemy
-5. Run the code with the following steps in your text editor's terminal
-6. export FLASK_APP=app.py
-7. export FLASK_ENV=development
-8. flask run --host=0.0.0.0 --port=5004 or whatever available port you prefer in your computer.
+3. Locate app.py file and go to database connection.
+4. In the app.config, line 34 in app.py change with your MySQL username/password and database name.
+5. For our case user=root, password=Alice***, MySQL database=project.
+6. To work with the user table for the registration or login you need to create it also with workbench following our class user model or with pyhton.
+7. A code snippet is availabe in the git createdb.py to create table user also. Just change with your database informations and run the code
+8. A table user will be created in your MySQL database.   
+9. pip install PyMysql which is python MySQL driver.
+10. pip install cryptography also for password encryption
+11. pip install FLASK
+12. pip install flask_sqlalchemy
+13. Run the code with the following steps in your text editor's terminal
+14. export FLASK_APP=app.py
+15. export FLASK_ENV=development
+16. flask run --host=0.0.0.0 --port=5004 or whatever available port you prefer in your computer.
 
 
