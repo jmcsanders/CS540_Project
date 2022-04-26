@@ -116,9 +116,12 @@ This file contains the updated website interface:
 3. You can run this index.html code within any text editor/to preview it
 
 **Final Flask Website application**
-1. Make sure python environment is set up and a python version 3.6 or later is set up
+1. Make sure python environment is set up and a python version 3.6 or later is installed.
 1. pip install FLASK
 2. pip install flask_sqlalchemy
-3. Run code
-4. Follow the link at the bottom of the command window (http://127.0.0.1:5001/)
+3. Run the code with the following stpes in your text editor's terminal
+4. export FLASK_APP=app.py
+5. export FLASK_ENV=development
+6.flask run --host=0.0.0.0 --port=5004 or whatever available port you prefer in your computer.
+
 
